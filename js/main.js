@@ -25,7 +25,18 @@ function showTab(contentClassName, index) {
 
     return false;
 }
+function  showSelected() {
+    if (event.target.classList.contains('current-text'))
+        return false;
 
+    var targetParentNode = event.target.parentNode;
+    alert(targetParentNode.firstElementChild);
+    for (var curNode = targetParentNode.firstElementChild; curNode; curNode = curNode.nextElementSibling) {
+        if (curNode.classList.contains('current-text'))
+            curNode.classList.remove('current-text');
+    }
+    event.target.classList.add('current-text');
+}
 /**
  * 当点击页脚微信时使微信公众号放大的动作
  * @returns {boolean}

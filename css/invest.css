@@ -235,3 +235,70 @@
 .page-nav-wrapper .next {
   width: 90px;
 }
+.statusSearch {
+  margin: -10px auto 20px;
+  width: 1080px;
+  height: 250px;
+  background: #fff;
+}
+.statusSearchPart{
+  padding: 0 30px;
+  width: 62%;
+  height: 180px;
+  float: left;
+  margin-top: 30px;
+}
+.statusSearchPart_title{
+  height: 40px;
+}
+.statusSearchPart_title h2 {
+  color: #666;
+  float: left;
+  font-size: 18px;
+  font-weight: normal;
+}
+.statusSearchPart li{
+  height: 32px;
+  line-height: 32px;
+}
+strong{
+  font-size: 16px;
+  color: #666666;
+  margin-right: 27px;
+}
+.statusSearchPart li a{
+  margin-right: 30px;
+}
+.statusSearchPart li a:hover{
+  color: #ed0f4e;
+}
+.current-text {
+  background-color: #ed5f4e;
+  color: #FFFFFF;
+  padding: 2px;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #ed5f4e;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+}
+.laydate-icon {
+  height: 22px;
+  line-height: 22px;
+  padding-right: 20px;
+  border: 1px solid #C6C6C6;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #fff;
+  outline: 0;
+  background-image: url(/img/icon.png);
+}
+.inline{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+.statusSearchPart_date{
+  padding-top: 10px;
+}

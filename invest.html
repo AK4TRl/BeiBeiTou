@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <!-- javascript -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/laydate/laydate.js"></script>
 </head>
 <body>
 <!-- navbar -->
@@ -28,14 +29,60 @@
             <li><a href="aboutUs-info.html">关于我们</a></li>
         </ul>
         <div class="nav-app left"><a href=""><i class="fa fa-mobile-phone" aria-hidden="true"></i>客户端</a></div>
-        <div class="nav-user-wrapper left"><i class="fa fa-user" aria-hidden="true"></i><a href="login.html"
-                                                                                           id="nav-login">登录</a> / <a
-                href="register.html">注册</a></div>
+        <div class="nav-user-wrapper left"><i class="fa fa-user" aria-hidden="true"></i><a href="login.html" id="nav-login">登录</a> / <a href="register.html">注册</a></div>
     </div>
 </nav>
 
 <!-- banner -->
 <section class="banner"><img src="img/invest_banner.png" alt=""></section>
+
+<!--search & status-->
+<section class="statusSearch">
+    <div class="statusSearchPart">
+            <div class="statusSearchPart_title">
+                <h2>筛选投资项目</h2>
+            </div>
+            <ul>
+                <!-- search condition -->
+                <li id="apr">
+                    <strong>利率：</strong>
+                    <a class="current-text" onclick="showSelected()">全部</a>
+                    <a onclick="showSelected()">10%以下</a>
+                    <a onclick="showSelected()">10%-15%</a>
+                    <a onclick="showSelected()">15%-20%</a>
+                    <a onclick="showSelected()">20%以上</a>
+                </li>
+                <li id="amount">
+                    <strong>金额：</strong>
+                    <a class="current-text" onclick="showSelected()">全部</a>
+                    <a onclick="showSelected()">10万以下</a>
+                    <a onclick="showSelected()">10-50万&nbsp;&nbsp;</a>
+                    <a onclick="showSelected()">50-100万</a>
+                    <a onclick="showSelected()">100万以上</a>
+                </li>
+                <li id="loanSchedule">
+                    <strong>进度：</strong>
+                    <a class="current-text" onclick="showSelected()">全部</a>
+                    <a onclick="showSelected()">50%以下</a>
+                    <a onclick="showSelected()">50%-80%</a>
+                    <a onclick="showSelected()">80%以上&nbsp;</a>
+                    <a onclick="showSelected()">满标</a>
+                </li>
+                <li id="product">
+                    <strong>标的：</strong>
+                    <a class="current-text" onclick="showSelected()">全部</a>
+                    <a onclick="showSelected()">供应链</a>
+                    <a onclick="showSelected()">约标</a>
+                </li>
+            </ul>
+            <div class="statusSearchPart_date">
+                <strong>还款日期：</strong>
+                    <input class="laydate-icon" onclick="laydate()">
+                    ----
+                    <input class="laydate-icon" onclick="laydate()">
+            </div>
+    </div>
+</section>
 
 <!-- content -->
 <section class="content">
@@ -463,5 +510,12 @@
     <a href=""> </a>
     <a href=""> </a>
 </section>
+<script>
+    ;!function(){
+        laydate({
+            elem: '#demo'
+        })
+    }();
+</script>
 </body>
 </html>

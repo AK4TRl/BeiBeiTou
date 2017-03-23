@@ -3,6 +3,7 @@
   height: 650px;
   margin: 70px auto;
   background-image: url("../img/login_bg.png");
+  background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -176,4 +177,32 @@
 .text-wrapper p span {
   font-size: 30px;
   line-height: 36px;
+}
+.tab-wrapper {
+  width: 540px;
+  height: 45px;
+  background-color: #fafafa;
+  position: relative;
+}
+.tab-wrapper div {
+  width: 540px;
+  border-top: 5px solid #fafafa;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  color: #999;
+  transition: 0.2s;
+}
+.tab-wrapper div.current,
+.tab-wrapper div:hover {
+  border-top: 5px solid #ed5f4e;
+  background-color: #fff;
+  color: #000;
+}
+.content-wrapper {
+  display: none;
+  overflow: hidden;
+}
+.content-wrapper.current {
+  display: block;
 }

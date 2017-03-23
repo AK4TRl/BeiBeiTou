@@ -35,9 +35,13 @@
 </nav>
 
 <!-- content -->
+
 <section class="content">
-    <div class="left-part left">
-        <div class="top-left">用户注册</div>
+    <section class="tab-wrapper">
+        <div class="left current" onclick="showTab('content-wrapper',0);">用户注册</div>
+        <div class="left" onclick="showTab('content-wrapper',1);">企业用户注册</div>
+    </section>
+    <div class="content-wrapper left-part left current">
         <table>
             <tr>
                 <td class="col-1"><span>*</span>用户名</td>
@@ -81,6 +85,51 @@
             </tr>
         </table>
     </div>
+    <div class="content-wrapper left-part left">
+        <table>
+            <tr>
+                <td class="col-1"><span>*</span>用户名</td>
+                <td class="col-2"><input type="text" name="name" id="name" class="need-check"></td>
+                <td class="col-3"><span id="hint-name"></span></td>
+            </tr>
+            <tr>
+                <td class="col-1"><span>*</span>手机号码</td>
+                <td class="col-2"><input type="text" name="phone" id="phone" class="need-check"></td>
+                <td class="col-3"><span id="hint-phone"></span></td>
+            </tr>
+            <tr>
+                <td><span>*</span>登录密码</td>
+                <td class="col-2"><input type="password" name="password" id="password" class="need-check"></td>
+                <td class="col-3"><span id="hint-password"></span></td>
+            </tr>
+            <tr>
+                <td><span>*</span>确认密码</td>
+                <td class="col-2"><input type="password" name="ensurePassword" id="ensurePassword" class="need-check"></td>
+                <td class="col-3"><span id="hint-ensurePassword"></span></td>
+            </tr>
+            <tr>
+                <td><span>*</span>图形验证码</td>
+                <td class="col-2"><input type="text" name="code" id="code"><a href=""><img src="img/temp_code.png" alt=""></a></td>
+            </tr>
+            <tr>
+                <td><span>*</span>手机验证码</td>
+                <td class="col-2"><input type="text" name="messageCode" id="messageCode"><a href="" class="get-code">获取验证码</a></td>
+            </tr>
+            <tr>
+                <td>邀请码</td>
+                <td class="col-2"><input type="text" name="inventCode" id="inventCode"></td>
+            </tr>
+            <tr>
+                <td class="last-row"></td>
+                <td class="last-row protocol-wrapper"><input type="checkbox" id="agreement" name="agreement">我同意<a class="protocol" onclick="showUserProtocol();">《贝贝投用户协议》</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="立即注册" onclick="checkForm();"></td>
+            </tr>
+        </table>
+    </div>
+
     <span class="spt left"></span>
     <div class="right-part left">
         <div class="top-right">已有账号？<a href="login.html">立即登录</a></div>
